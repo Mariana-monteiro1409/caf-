@@ -1,3 +1,6 @@
+from fastapi import FastAPI, Query
+import requests
+
 print(
                                  ''' \n Ｒｅｃｅｉｔａ ｃａｆé\n''' 
 )
@@ -26,9 +29,12 @@ if agua_fervida == 'sim':
     print('Espere o processo de filtragem acabar, quando não tiver mais água no filtro')
     termino_filtragem = input('A filtragem acabou?: \n')
 elif agua_fervida == 'não':
-    print('Espere a água ferver')        
+    print('Espere a água ferver')  
+    termino_filtragem = input('A filtragem acabou?: \n')
 
 if termino_filtragem == 'sim':
     print('Seu café está pronto, aproveite! \n')
 elif termino_filtragem == 'não':
     print('Espere a filtragem acabar')
+    termino_filtragem  
+
